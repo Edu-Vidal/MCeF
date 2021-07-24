@@ -1,2 +1,1 @@
-# MCeF
-Métodos Computacionais em Física
+# Métodos Computacionais em Física
