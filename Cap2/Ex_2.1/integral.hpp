@@ -4,7 +4,7 @@ typedef double(*Expression)(double);
 
 class Integral {
   public:
-    static double compute(Expression f, double integrationLimits[], int numberOfDivisions);
+    static double rectangleSum(Expression f, double integrationLimits[], int numberOfDivisions);
 
-    static double computeMedia(Expression f, double integrationLimits[], int numberOfDivisions);
+    static double rectangleMean(Expression f, double integrationLimits[], int numberOfDivisions);
 };

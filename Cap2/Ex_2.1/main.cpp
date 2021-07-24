@@ -22,7 +22,7 @@ using namespace std::chrono;
 int main() {
     // EX 2.1 - 1
     auto start = high_resolution_clock::now();
-    double area = Integral::compute(f, integrationLimits, numberOfIntervals);
+    double area = Integral::rectangleSum(f, integrationLimits, numberOfIntervals);
     auto stop = high_resolution_clock::now();
 
     auto duration = duration_cast<microseconds>(stop - start);
@@ -32,7 +32,7 @@ int main() {
 
     // EX 2.1 - 2
     start = high_resolution_clock::now();
-    area = Integral::computeMedia(f, integrationLimits, numberOfIntervals);
+    area = Integral::rectangleMean(f, integrationLimits, numberOfIntervals);
     stop = high_resolution_clock::now();
 
     duration = duration_cast<microseconds>(stop - start);
@@ -42,7 +42,7 @@ int main() {
 
     // EX 2.1 - 3
     start = high_resolution_clock::now();
-    area = Integral::computeMedia(aprox_f, integrationLimits, numberOfIntervals);
+    area = Integral::rectangleMean(aprox_f, integrationLimits, numberOfIntervals);
     stop = high_resolution_clock::now();
 
     duration = duration_cast<microseconds>(stop - start);
