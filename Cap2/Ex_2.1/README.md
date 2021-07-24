@@ -14,4 +14,4 @@ Tempo gasto: 1996 microsegundos
 ```
 
 A depender das prioridades do cálculo é possível inferir o melhor método para aproximar o cálculo de um integral definida.  
-Sabe-se que o valor desejado é $\pi$/4 ( 0.78539816339 ), portanto utilizar a média da soma de retângulos traz o resultado mais aproximado, apesar de mais demorado.
+Sabe-se que o valor desejado é $\pi/4$ ( 0.78539816339 ), portanto utilizar a média da soma de retângulos traz o resultado mais aproximado, apesar de mais demorado.
