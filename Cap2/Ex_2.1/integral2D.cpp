@@ -1,6 +1,6 @@
 #include "integral2D.hpp"
 
-double Integral::rectangleSum(Expression f, double integrationLimits[], int numberOfDivisions)
+double Integral::rectangleSum(Expression f, double integrationLimits[], int &numberOfDivisions)
 {
   double integral = 0;
   double dx = (integrationLimits[1] - integrationLimits[0]) / numberOfDivisions;
@@ -11,7 +11,7 @@ double Integral::rectangleSum(Expression f, double integrationLimits[], int numb
   return integral;
 };
 
-double Integral::rectangleMean(Expression f, double integrationLimits[], int numberOfDivisions)
+double Integral::rectangleMean(Expression f, double integrationLimits[], int &numberOfDivisions)
 {
   double integral = 0;
   double dx = (integrationLimits[1] - integrationLimits[0]) / numberOfDivisions;
