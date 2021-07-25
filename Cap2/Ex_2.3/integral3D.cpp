@@ -9,6 +9,7 @@ double Integral::somaParalelepipedosMedia(
     double integral = 0;
     double dx = (integrationLimitsX[1] - integrationLimitsX[0]) / numberOfDivisions;
     double dy = (integrationLimitsY[1] - integrationLimitsY[0]) / numberOfDivisions;
+    
     for (int i = 1; i <= numberOfDivisions; i++)
     {   
         for (int j = 1; j <= numberOfDivisions; j++)
