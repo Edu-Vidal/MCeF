@@ -1,4 +1,4 @@
-#include "integral.hpp"
+#include "integral2D.hpp"
 
 double Integral::rectangleSum(Expression f, double integrationLimits[], int numberOfDivisions)
 {
