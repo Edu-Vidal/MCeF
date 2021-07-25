@@ -2,16 +2,16 @@
 #include <cmath>
 #include <chrono>
 
-#include "integral.cpp"
+#include "integral2D.cpp"
 
-// f(x) = sqrt(1-a²)
-double f(double a){
-    return (std::sqrt(1-(a*a)));
+// f(x) = sqrt(1-x²)
+double f(double x){
+    return (std::sqrt(1-(x*x)));
 };
 
 // f(x) = -x² + 1
-double aprox_f(double a){
-    return (-(a*a)+1);
+double aprox_f(double x){
+    return (-(x*x)+1);
 };
 
 double integrationLimits[2] {0, 1};
