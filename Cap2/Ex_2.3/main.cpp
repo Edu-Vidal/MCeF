@@ -9,7 +9,7 @@ double f(double x, double y){
     return exp(0.1 * (x * x + y * y));
 };
 
-// Em x [-5, 5], em y [-5, 5]
+// Em x [-1, 1], em y [-1, 1]
 double integrationLimitsX[] {-1, 1};
 double integrationLimitsY[] {-1, 1};
 int numberOfIntervals = 1000;
