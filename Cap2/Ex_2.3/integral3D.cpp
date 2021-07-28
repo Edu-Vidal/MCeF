@@ -1,10 +1,10 @@
 #include "integral3D.hpp"
 
-double Integral::somaParalelepipedosMedia(
+double Integral::parallelepipeds(
     Expression f,
     double integrationLimitsX[], 
     double integrationLimitsY[],
-    int numberOfDivisions)
+    int &numberOfDivisions)
 {
     double integral = 0;
     double dx = (integrationLimitsX[1] - integrationLimitsX[0]) / numberOfDivisions;

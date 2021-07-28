@@ -18,7 +18,7 @@ using namespace std::chrono;
 
 int main(){
     auto start = high_resolution_clock::now();
-    double volume = Integral::somaParalelepipedosMedia(
+    double volume = Integral::parallelepipeds(
         f, 
         integrationLimitsX, 
         integrationLimitsY, 
