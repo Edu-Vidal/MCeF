@@ -4,6 +4,7 @@
 
 #include "integral2D.cpp"
 
+// Declaração de funções -------
 // f(x) = sqrt(1-x²)
 double f(double x){
     return (std::sqrt(1-(x*x)));
@@ -13,6 +14,7 @@ double f(double x){
 double aprox_f(double x){
     return (-(x*x)+1);
 };
+//------------------------------
 
 double integrationLimits[2] {0, 1};
 int numberOfIntervals = 100000;

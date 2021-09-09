@@ -4,10 +4,12 @@
 
 #include "integral3D.cpp"
 
+// Declaração de funções -------
 // f(x, y) = e^(0.1(x²+y²))
 double f(double x, double y){
     return exp(0.1 * (x * x + y * y));
 };
+//------------------------------
 
 // Em x [0, 1], em y [0, 1]
 double integrationLimitsX[] {0, 1};
