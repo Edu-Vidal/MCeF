@@ -1,11 +1,10 @@
-#include <random>
 #include "integral.hpp"
 
-float Integral::monteCarlo(
-    Expression f,
-    double integrationLimitsX[],
-    double integrationLimitsY[],
+double Integral::monteCarlo2D(
+    Expression2D f,
+    double integrationLimits[],
     int &numberOfDivisions) {
+
     // Gera número 32 bits, 
     // função custosa para muitas repetições, 
     // usado para gerar seed
@@ -17,33 +16,21 @@ float Integral::monteCarlo(
 
     // Recebe número e distribui de acordo com limites passados, 
     // uniformemente - Retorna número real
-    std::uniform_real_distribution<double> dist_x(
-        integrationLimitsX[0], 
-        integrationLimitsX[1]
-        );
-    std::uniform_real_distribution<double> dist_y(
-        integrationLimitsY[0], 
-        integrationLimitsY[1]
+    std::uniform_real_distribution<double> dist(
+        integrationLimits[0], 
+        integrationLimits[1]
         );
 
-    int n_c = 0;
+    double n_c = 0;
 
-    for (int i = 0; i <= numberOfDivisions; i++) {
-        int r_x = dist_x(gen);
-        double x = integrationLimitsX[0] + (integrationLimitsX[1] - integrationLimitsX[0]) * r_x;
-        int r_y = dist_y(gen);
-        double y = integrationLimitsY[0] + (integrationLimitsY[1] - integrationLimitsY[0]) * r_y;
-        
-        double z = f(integrationLimitsX[0], integrationLimitsY[0]) +
-            (f(integrationLimitsX[0], integrationLimitsY[1]) - 
-            f(integrationLimitsX[0], integrationLimitsY[0])) * r_x +
-            (f(integrationLimitsX[1], integrationLimitsY[0]) - 
-            f(integrationLimitsX[0], integrationLimitsY[0])) * r_y;
+    for (int i = 0; i < numberOfDivisions; i++) {
+        double x = dist(gen);
+        double y = dist(gen);
 
-        if (f(x, y) <= z) {
-            n_c += 1;
+        if (y <= f(x)) {
+            n_c++;
         };
-
-        return n_c / numberOfDivisions;
     }
+
+    return n_c / numberOfDivisions;
 }

@@ -1,13 +1,23 @@
 #pragma once
 
-typedef double(*Expression)(double, double);
+#include <random>
+
+typedef double(*Expression2D)(double);
+typedef double(*Expression3D)(double);
 
 class Integral
 {
 public:
-    float monteCarlo(Expression f,
-               double integrationLimitsX[],
-               double integrationLimitsY[],
-               int &numberOfDivisions);
+    static double monteCarlo2D(
+        Expression2D f,
+        double integrationLimits[],
+        int &numberOfDivisions
+    );
+    static double monteCarlo3D(
+        Expression3D f,
+        double integrationLimitsX[],
+        double integrationLimitsY[],
+        int &numberOfDivisions
+    );
 };
 
